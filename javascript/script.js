@@ -1,32 +1,23 @@
- // this is a simple console logging statement
- console.log("Hello world!");
+// 1. Create a function that takes in 2 parameters num1 and num2 and subtracts the two numbers.
+// 2. Create a function expression called welcome that take in name and age as a parameters. The outcome should be like so:
+// e.g. "My name is Cameron, i am 28 years old"
+// 3. Create an arrow function called powerUp that takes in two values n1 and n2. The arrow function will return the power of the two numbers.
+// e.g:
+// * n1=2, n2=3 will return 8 (2 x 2 x 2);
+// * n1=3, n2=3 will return 27 (3 x 3 x 3);
+// -> hint use Math.pow()
 
- // different types of console logging
- const msg = 'this is a message';
+let subtract = (num1, num2) => num1 - num2;
 
- console.log(msg);
+console.log(subtract(10, 7));
 
- console.info(msg);
+//
 
- console.warn(msg);
+let welcome = (nam, age) => `My name is ${nam}, i am ${age} years old` 
 
- console.error(msg);
+console.log(welcome(`John`, 30));
 
- // to make html style
+let powerUp = (n1, n2) => Math.pow(n1, n2);
 
- console.log('%c' + msg, 'color: black; background-color: white; font-size:20px; padding: 5px;');
-
- console.log('%c' + msg + '%c' + msg, 'color: red;', 'color: green;');
-
-// [09:53] Guthrie, Cameron
-//1. Create 4 different console logging statements using the following informationFirst name Second name Where you are from And your star sign
-
-console.log("First name: Mukul");
-console.log("Second name: Chauhan");
-console.log("Where you are from: London");
-console.log("star sign: Virgo");
-
-//[09:54] Guthrie, Cameron
-//2. Create a console.log() with a message which uses the following CSS properties:Text colour to be orangeText to be set to the fantasy font family.Text to be boldBackground color to be blackPadding around the text to be 10px
-
-console.log('%c' + msg, 'color: orange; background-color: black; font-family: fantasy; font-weight: bold; font-size:20px; padding: 10px;');
+console.log(powerUp(2, 3)); //8
+console.log(powerUp(3, 3)); //27
