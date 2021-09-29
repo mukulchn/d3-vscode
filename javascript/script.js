@@ -1,32 +1,24 @@
- // this is a simple console logging statement
- console.log("Hello world!");
+// 1. Create an array with the name myArray with 2 elements hello,everyone..
+// 2. Next print the length of the array
+// 3. Next use the push() method to add 3 elements to the array
+// 4. Next print the length of the array
+// 5. Next use shift() to remove an element
+// 6. Finally print the contents of the array using a for of loop.
 
- // different types of console logging
- const msg = 'this is a message';
+let hello = "hello";
+let everyone =`everyone`;
 
- console.log(msg);
+let myArray = [hello, everyone];
 
- console.info(msg);
+console.log(myArray.length);
+myArray.push("Hi", "There", "World");
 
- console.warn(msg);
+console.log(myArray);
+console.log(myArray.length);
 
- console.error(msg);
+let rmv = myArray.shift();
+console.log(`removed...${rmv}`);
 
- // to make html style
-
- console.log('%c' + msg, 'color: black; background-color: white; font-size:20px; padding: 5px;');
-
- console.log('%c' + msg + '%c' + msg, 'color: red;', 'color: green;');
-
-// [09:53] Guthrie, Cameron
-//1. Create 4 different console logging statements using the following informationFirst name Second name Where you are from And your star sign
-
-console.log("First name: Mukul");
-console.log("Second name: Chauhan");
-console.log("Where you are from: London");
-console.log("star sign: Virgo");
-
-//[09:54] Guthrie, Cameron
-//2. Create a console.log() with a message which uses the following CSS properties:Text colour to be orangeText to be set to the fantasy font family.Text to be boldBackground color to be blackPadding around the text to be 10px
-
-console.log('%c' + msg, 'color: orange; background-color: black; font-family: fantasy; font-weight: bold; font-size:20px; padding: 10px;');
+for(let e of myArray){
+    console.log(e);
+}
