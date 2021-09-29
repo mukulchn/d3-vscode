@@ -1,32 +1,62 @@
- // this is a simple console logging statement
- console.log("Hello world!");
 
- // different types of console logging
- const msg = 'this is a message';
 
- console.log(msg);
+//Flowchart 1
+for(let A=100; A<=200; A++){
+    console.log(`${A}`)
+}
 
- console.info(msg);
+//Flowchart 2
+for(let A=100; A<=200; A++){
 
- console.warn(msg);
+    //console.log(`${A}`)
+    let remainder = A%2;
+    switch(remainder){
+        case 0:
+            console.log('-');
+            break;
+        default:
+            console.log('*');
 
- console.error(msg);
+    }
+}
 
- // to make html style
+//Create a method that can print out the numbers 1-10 10 times each.
+for(let i=0; i < 10; i++){
+    myfunc(i);
+}
 
- console.log('%c' + msg, 'color: black; background-color: white; font-size:20px; padding: 5px;');
+function myfunc(p1){
+    for(let i=0; i < 10; i++){
+        console.log(p1);
+    }
+}
 
- console.log('%c' + msg + '%c' + msg, 'color: red;', 'color: green;');
+// . Write a switch case statement which uses the current day as its expression and matches with the relevant case.
+// Criteria:
+// * Omit a break statement if it is a weekday, until the last day
+// * Use a default case to handle an invalid range.
 
-// [09:53] Guthrie, Cameron
-//1. Create 4 different console logging statements using the following informationFirst name Second name Where you are from And your star sign
+const dayin = window.prompt("Enter the day of week")
+// const today = new Date();
 
-console.log("First name: Mukul");
-console.log("Second name: Chauhan");
-console.log("Where you are from: London");
-console.log("star sign: Virgo");
-
-//[09:54] Guthrie, Cameron
-//2. Create a console.log() with a message which uses the following CSS properties:Text colour to be orangeText to be set to the fantasy font family.Text to be boldBackground color to be blackPadding around the text to be 10px
-
-console.log('%c' + msg, 'color: orange; background-color: black; font-family: fantasy; font-weight: bold; font-size:20px; padding: 10px;');
+// console.log(`day: ${today.getDay()}`)
+switch(dayin){
+    case 'SUNDAY':
+        console.log("SUNDAY");
+        break;
+    case 'MONDAY':
+        console.log("MONDAY");
+    case 'TUESDAY':
+        console.log("TUESDAY");
+    case 'WEDNESDAY':
+        console.log("WEDNESDAY");
+    case 'THURSDAY':
+        console.log("THURSDAY");
+    case 'FRIDAY':
+        console.log("FRIDAY");
+    case 'SATURDAY':
+        console.log("SATURDAY");
+        break;
+    default:
+        console.log("Invalid day range");                  
+}
